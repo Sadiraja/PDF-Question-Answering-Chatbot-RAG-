@@ -13,6 +13,7 @@ from config import (
     DEFAULT_EMBEDDING_PROVIDER,
     DEFAULT_HF_MODEL,
     DEFAULT_LLM_PROVIDER,
+    DEFAULT_OPENROUTER_MODEL,
     DEFAULT_GEMINI_MODEL,
     DEFAULT_OPENAI_MODEL,
     STRICT_FALLBACK_MESSAGE
@@ -120,14 +121,38 @@ with st.sidebar:
     # 3. LLM Generation Provider
     llm_choice = st.selectbox(
         "LLM Provider",
-        options=["Google Gemini", "OpenAI", "Local Extractive Mode"],
+        options=["OpenRouter", "Google Gemini", "OpenAI", "Local Extractive Mode"],
         index=0,
-        help="LLM for synthesizing answers with citations. Local Extractive Mode works completely offline without API keys."
+        help="Select LLM backend. OpenRouter supports hundreds of models (GPT-4o-mini, Gemini, Llama, DeepSeek)."
     )
 
-    # API Keys
+    # Model and API Key selection
+    selected_model = None
     api_key_input = ""
-    if "gemini" in llm_choice.lower() or "gemini" in emb_choice.lower():
+
+    if "openrouter" in llm_choice.lower():
+        selected_model = st.selectbox(
+            "OpenRouter Model",
+            options=[
+                "openai/gpt-4o-mini",
+                "google/gemini-2.0-flash-exp:free",
+                "meta-llama/llama-3.3-70b-instruct",
+                "deepseek/deepseek-chat",
+                "anthropic/claude-3.5-haiku"
+            ],
+            index=0,
+            help="Choose model available on OpenRouter."
+        )
+        env_key = os.getenv("OPENROUTER_API_KEY") or ""
+        api_key_input = st.text_input(
+            "OpenRouter API Key",
+            value=env_key,
+            type="password",
+            placeholder="sk-or-v1-...",
+            help="Get your key at https://openrouter.ai/keys"
+        )
+    elif "gemini" in llm_choice.lower() or "gemini" in emb_choice.lower():
+        selected_model = DEFAULT_GEMINI_MODEL
         env_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or ""
         api_key_input = st.text_input(
             "Gemini API Key",
@@ -137,6 +162,7 @@ with st.sidebar:
             help="Get your key at https://aistudio.google.com/app/apikey"
         )
     elif "openai" in llm_choice.lower() or "openai" in emb_choice.lower():
+        selected_model = DEFAULT_OPENAI_MODEL
         env_key = os.getenv("OPENAI_API_KEY") or ""
         api_key_input = st.text_input(
             "OpenAI API Key",
@@ -347,7 +373,7 @@ with tab_chat:
 
                     generator = RAGGenerator(
                         provider=llm_choice,
-                        model_name=DEFAULT_GEMINI_MODEL if "gemini" in llm_choice.lower() else DEFAULT_OPENAI_MODEL,
+                        model_name=selected_model,
                         api_key=api_key_input
                     )
                     rag_res = generator.generate(retrieval_res)
@@ -435,7 +461,7 @@ with tab_eval:
                 )
                 generator = RAGGenerator(
                     provider=llm_choice,
-                    model_name=DEFAULT_GEMINI_MODEL if "gemini" in llm_choice.lower() else DEFAULT_OPENAI_MODEL,
+                    model_name=selected_model,
                     api_key=api_key_input
                 )
                 results = run_evaluation(retriever, generator)

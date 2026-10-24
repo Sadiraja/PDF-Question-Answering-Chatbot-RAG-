@@ -23,7 +23,9 @@ DEFAULT_GEMINI_EMBEDDING_MODEL = "models/text-embedding-004"
 DEFAULT_OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
 
 # LLM Generation Configuration
-DEFAULT_LLM_PROVIDER = "Google Gemini"  # "Google Gemini", "OpenAI", "Extractive Fallback"
+DEFAULT_LLM_PROVIDER = "OpenRouter"  # "OpenRouter", "Google Gemini", "OpenAI", "Extractive Fallback"
+DEFAULT_OPENROUTER_MODEL = "openai/gpt-4o-mini"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
 DEFAULT_OPENAI_MODEL = "gpt-4o-mini"
 

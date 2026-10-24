@@ -265,10 +265,22 @@ if __name__ == "__main__":
     print(f"Indexed {vector_store.count()} chunks into FAISS vector database.")
 
     # Detect LLM provider
-    provider = "Google Gemini" if os.getenv("GEMINI_API_KEY") else ("OpenAI" if os.getenv("OPENAI_API_KEY") else "Local Extractive Mode")
-    print(f"\n[Step 4/4] Executing benchmark suite with LLM Provider: {provider}...")
+    if os.getenv("OPENROUTER_API_KEY"):
+        provider = "OpenRouter"
+        model_name = "openai/gpt-4o-mini"
+    elif os.getenv("GEMINI_API_KEY"):
+        provider = "Google Gemini"
+        model_name = "gemini-2.5-flash"
+    elif os.getenv("OPENAI_API_KEY"):
+        provider = "OpenAI"
+        model_name = "gpt-4o-mini"
+    else:
+        provider = "Local Extractive Mode"
+        model_name = "Extractive-Rules"
+
+    print(f"\n[Step 4/4] Executing benchmark suite with LLM Provider: {provider} ({model_name})...")
     retriever = RAGRetriever(embedder=embedder, vector_store=vector_store, top_k=DEFAULT_TOP_K, score_threshold=DEFAULT_SCORE_THRESHOLD)
-    generator = RAGGenerator(provider=provider)
+    generator = RAGGenerator(provider=provider, model_name=model_name)
 
     results = run_evaluation(retriever, generator)
 

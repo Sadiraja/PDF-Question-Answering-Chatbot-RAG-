@@ -1,9 +1,9 @@
 # 🧪 PDF Question-Answering Chatbot (RAG) — Test Evaluation Report
 
-**Date:** 2026-10-24 23:49:29  
+**Date:** 2026-10-24 23:56:50  
 **Vector Database:** `FAISS`  
 **Embedding Model:** `all-MiniLM-L6-v2`  
-**LLM Generation Provider:** `Local Extractive Mode`  
+**LLM Generation Provider:** `OpenRouter`  
 **Overall Score:** **10 / 10 Passed (100.0%)**
 
 ---
@@ -36,9 +36,7 @@
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> In prospective clinical trials across 12 academic medical centers,
-the model demonstrated an overall sensitivity of 94.7% and a specificity of 91.3% in identifying malignant pulmonary
-nodules (>6mm). [AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 2] *(Generated via Local Extractive Engine)*
+> The CheXNet-Pro engine demonstrated an overall sensitivity of 94.7% and a specificity of 91.3% in identifying malignant pulmonary nodules (>6mm) [AI_Healthcare_Whitepaper.pdf, Page 1].
 
 **Source Citations Attached:**
 - **[AI_Healthcare_Whitepaper.pdf, Page 1]** (Score: 0.784): *"2. Diagnostic Model Performance (CheXNet-Pro Engine)
@@ -61,8 +59,7 @@ Artificial Intelligence (AI) and deep convo..."*
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> Processing latency is
-strictly governed under a Service Level Agreement (SLA) of less than 1.8 seconds per volumetric CT series. [AI_Healthcare_Whitepaper.pdf, Page 2, Chunk 1] *(Generated via Local Extractive Engine)*
+> The maximum processing latency permitted for thoracic CT series under the clinical workflow SLA is less than 1.8 seconds per volumetric CT series [AI_Healthcare_Whitepaper.pdf, Page 2].
 
 **Source Citations Attached:**
 - **[AI_Healthcare_Whitepaper.pdf, Page 2]** (Score: 0.615): *"3. Clinical Workflow & DICOM / PACS Integration
@@ -90,9 +87,7 @@ multi-center dataset of 142,500 chest radiographs. In prospective clinical trial
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> Regulatory Clearances & Quality Management
-PulseVision-AI has achieved regulatory clearance under the United States Food and Drug Administration (FDA)
-510(k) pathway (K233912) as a Class II Software as a Medical Device (SaMD). [AI_Healthcare_Whitepaper.pdf, Page 3, Chunk 1] *(Generated via Local Extractive Engine)*
+> The PulseVision-AI system was cleared under the United States Food and Drug Administration (FDA) 510(k) pathway with clearance number K233912 [AI_Healthcare_Whitepaper.pdf, Page 3].
 
 **Source Citations Attached:**
 - **[AI_Healthcare_Whitepaper.pdf, Page 3]** (Score: 0.665): *"5. Regulatory Clearances & Quality Management
@@ -115,8 +110,7 @@ Artificial Intelligence (AI) and deep convo..."*
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> All data at rest is encrypted using 256-bit AES-GCM cryptographic algorithms with hardware security module (HSM)
-managed keys. [AI_Healthcare_Whitepaper.pdf, Page 4, Chunk 2] *(Generated via Local Extractive Engine)*
+> The cryptographic algorithm mandated for data at rest is 256-bit AES-GCM, and for data in transit, the encryption standard required is TLS 1.3 with mutual certificate authentication (mTLS) [AI_Healthcare_Whitepaper.pdf, Page 4, Chunk 2].
 
 **Source Citations Attached:**
 - **[AI_Healthcare_Whitepaper.pdf, Page 4]** (Score: 0.6): *"All data at rest is encrypted using 256-bit AES-GCM cryptographic algorithms with hardware security module (HSM)
@@ -137,8 +131,7 @@ information (PHI) undergoes automated de-identification prior to secondary telem
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> Hybrid Work Policy & Office Attendance
-Employees assigned to hybrid status are required to work a minimum of 2 days per week on-site at their designated [Company_Policy_Handbook.pdf, Page 1, Chunk 1] *(Generated via Local Extractive Engine)*
+> The company's core collaboration working hours are from 10:00 AM to 4:00 PM Eastern Standard Time (EST), Monday through Friday [Company_Policy_Handbook.pdf, Page 1, Chunk 1]. Employees assigned to hybrid status are required to work a minimum of 2 days per week on-site at their designated regional office [Company_Policy_Handbook.pdf, Page 1, Chunk 2].
 
 **Source Citations Attached:**
 - **[Company_Policy_Handbook.pdf, Page 1]** (Score: 0.731): *"Apex Innovations Employee Operations & Policy
@@ -168,9 +161,7 @@ at least 14 calendar days in advance. A maximum of 5 unused va..."*
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> Parental Leave Entitlements
-New parents, whether through birth, adoption, or surrogacy, are entitled to 16 weeks of fully paid parental leave for
-the primary caregiver, and 8 weeks of fully paid leave for the secondary caregiver. [Company_Policy_Handbook.pdf, Page 2, Chunk 1] *(Generated via Local Extractive Engine)*
+> New parents are entitled to 16 weeks of fully paid parental leave for the primary caregiver and 8 weeks of fully paid leave for the secondary caregiver [Company_Policy_Handbook.pdf, Page 2].
 
 **Source Citations Attached:**
 - **[Company_Policy_Handbook.pdf, Page 2]** (Score: 0.79): *"3. Paid Time Off (PTO) & Leave Allocations
@@ -188,9 +179,7 @@ semi-monthly basis. In addition, employees receive 10 days of paid medical/sick 
 - **Test Status:** ✅ PASS — *Verified fact with source citation.*
 
 **Generated Answer:**
-> Expense Reimbursement Guidelines
-Business-related expenses incurred on behalf of the company must be submitted via the Concur expense portal
-within 30 calendar days of purchase. [Company_Policy_Handbook.pdf, Page 3, Chunk 1] *(Generated via Local Extractive Engine)*
+> Business-related expenses must be submitted within 30 calendar days of purchase [Company_Policy_Handbook.pdf, Page 3, Chunk 1]. The home office equipment stipend amount is $1,200.00 USD [Company_Policy_Handbook.pdf, Page 3, Chunk 1].
 
 **Source Citations Attached:**
 - **[Company_Policy_Handbook.pdf, Page 3]** (Score: 0.66): *"6. Expense Reimbursement Guidelines

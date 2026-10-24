@@ -18,7 +18,7 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) conversational system d
 - **⚡ Dual Vector Database Architecture:** Seamlessly toggle between **FAISS** (in-memory flat inner product / cosine similarity) and **ChromaDB** (persistent collection storage).
 - **🛡️ Strict Anti-Hallucination Guardrails:** Employs cosine similarity score thresholding and strict system prompt constraints. If a query falls outside the uploaded documents, the system refuses to guess and delivers a clear fallback message.
 - **📍 Verified Source Citations:** Every factual response explicitly cites the source document and page number (e.g., `[AI_Healthcare_Whitepaper.pdf, Page 1]`), accompanied by an interactive drawer displaying retrieved passages and similarity scores.
-- **🤖 Multi-Provider LLM & Offline Extractive Mode:** Connects to **Google Gemini** (`gemini-2.5-flash`), **OpenAI** (`gpt-4o-mini`), or an **Offline Extractive Fallback** that requires zero API keys.
+- **🤖 Multi-Provider LLM & Offline Extractive Mode:** Connects to **OpenRouter** (`openai/gpt-4o-mini`, `google/gemini-2.0-flash-exp:free`, `meta-llama/llama-3.3-70b-instruct`), **Google Gemini**, **OpenAI**, or an **Offline Extractive Fallback** that requires zero API keys.
 - **🧪 Built-in 10-Question Benchmark Suite:** Automated CLI and interactive UI test runner evaluating in-domain factual retrieval and out-of-domain refusal.
 
 ---

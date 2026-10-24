@@ -29,13 +29,19 @@ class RAGGenerator:
 
     def __init__(
         self,
-        provider: str = "Google Gemini",
+        provider: str = "OpenRouter",
         model_name: Optional[str] = None,
         api_key: Optional[str] = None
     ):
         self.provider = provider
         self.model_name = model_name
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or os.getenv("OPENAI_API_KEY")
+        self.api_key = (
+            api_key
+            or os.getenv("OPENROUTER_API_KEY")
+            or os.getenv("GEMINI_API_KEY")
+            or os.getenv("GOOGLE_API_KEY")
+            or os.getenv("OPENAI_API_KEY")
+        )
 
     def _extract_citations(self, chunks: List[RetrievedChunk]) -> List[Dict[str, Any]]:
         """Transforms retrieved chunks into user-friendly citation objects."""
@@ -82,16 +88,59 @@ Answer (Remember to cite [Document, Page X] for every claim, or reply that you c
 
         # 2. Provider Routing
         try:
-            if "gemini" in provider_lower or "google" in provider_lower:
+            if "openrouter" in provider_lower:
+                return self._call_openrouter(query, prompt, citations, retrieval_result)
+            elif "gemini" in provider_lower or "google" in provider_lower:
                 return self._call_gemini(query, prompt, citations, retrieval_result)
             elif "openai" in provider_lower:
                 return self._call_openai(query, prompt, citations, retrieval_result)
             else:
                 return self._call_extractive(query, citations, retrieval_result)
         except Exception as e:
-            # Fallback to extractive if API call errors (e.g., quota or missing key)
+            # Fallback to extractive if API call errors (e.g., quota or network error)
             print(f"[RAGGenerator Warning] LLM call failed with error: {e}. Falling back to Extractive QA.")
             return self._call_extractive(query, citations, retrieval_result, fallback_reason=str(e))
+
+    def _call_openrouter(
+        self,
+        query: str,
+        prompt: str,
+        citations: List[Dict[str, Any]],
+        retrieval_result: RetrievalResult
+    ) -> RAGResponse:
+        key = self.api_key or os.getenv("OPENROUTER_API_KEY")
+        if not key:
+            return self._call_extractive(query, citations, retrieval_result, fallback_reason="No OPENROUTER_API_KEY provided")
+
+        from openai import OpenAI
+        client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=key,
+            default_headers={
+                "HTTP-Referer": "https://github.com/Sadiraja/PDF-Question-Answering-Chatbot-RAG-",
+                "X-Title": "PDF-RAG-Chatbot"
+            }
+        )
+        model_name = self.model_name or "openai/gpt-4o-mini"
+
+        response = client.chat.completions.create(
+            model=model_name,
+            temperature=0.1,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        answer_text = response.choices[0].message.content.strip()
+        is_answerable = "cannot answer this question" not in answer_text.lower()
+
+        return RAGResponse(
+            answer=answer_text,
+            citations=citations if is_answerable else [],
+            is_answerable=is_answerable,
+            model_used=f"OpenRouter ({model_name})",
+            retrieval_result=retrieval_result
+        )
 
     def _call_gemini(
         self,
