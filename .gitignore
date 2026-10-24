@@ -1,0 +1,27 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Vector database local storage
+.chroma_db/
+.faiss_index/
+chroma_db/
+
+# Streamlit config / cache
+.streamlit/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp

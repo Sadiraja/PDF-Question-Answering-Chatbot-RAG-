@@ -1,0 +1,320 @@
+[
+  {
+    "id": 1,
+    "category": "In-Domain / Factual",
+    "question": "What are the sensitivity and specificity metrics of the CheXNet-Pro engine for identifying malignant pulmonary nodules?",
+    "target_doc": "AI_Healthcare_Whitepaper.pdf",
+    "target_page": 1,
+    "expected_summary": "94.7% sensitivity and 91.3% specificity in identifying malignant pulmonary nodules (>6mm).",
+    "generated_answer": "In prospective clinical trials across 12 academic medical centers,\nthe model demonstrated an overall sensitivity of 94.7% and a specificity of 91.3% in identifying malignant pulmonary\nnodules (>6mm). [AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 2] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 1,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p1_c1",
+        "similarity_score": 0.784,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 2]",
+        "preview": "2. Diagnostic Model Performance (CheXNet-Pro Engine)\nThe underlying diagnostic inference engine, designated as CheXNet-Pro v2.4, was evaluated on a curated\nmulti-center dataset of 142,500 chest radiographs. In prospective clinical trials across 12 ac...",
+        "full_text": "2. Diagnostic Model Performance (CheXNet-Pro Engine)\nThe underlying diagnostic inference engine, designated as CheXNet-Pro v2.4, was evaluated on a curated\nmulti-center dataset of 142,500 chest radiographs. In prospective clinical trials across 12 academic medical centers,\nthe model demonstrated an overall sensitivity of 94.7% and a specificity of 91.3% in identifying malignant pulmonary\nnodules (>6mm). For tension pneumothorax triage, CheXNet-Pro achieved an area under the receiver operating\ncharacteristic curve (AUROC) of 0.982.\nKey Benchmark Summary: The model reduced average time-to-treatment for critical findings from 74 minutes to 11.5"
+      },
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 1,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p1_c0",
+        "similarity_score": 0.535,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 1]",
+        "preview": "Clinical Whitepaper: Artificial Intelligence in\nModern Diagnostic Radiology\nDocument ID: MED-AI-2024-V2 | Release Date: October 2024 | Author: Global Healthcare AI Consortium\n1. Executive Summary & Overview\nArtificial Intelligence (AI) and deep convo...",
+        "full_text": "Clinical Whitepaper: Artificial Intelligence in\nModern Diagnostic Radiology\nDocument ID: MED-AI-2024-V2 | Release Date: October 2024 | Author: Global Healthcare AI Consortium\n1. Executive Summary & Overview\nArtificial Intelligence (AI) and deep convolutional neural networks (CNNs) have emerged as pivotal tools in\naugmenting clinical radiology workflows. This whitepaper documents the clinical validation, regulatory architecture,\nand technical benchmarks of the PulseVision-AI platform, designed specifically for automated triage and\ncomputer-aided detection (CADe) of thoracic abnormalities in emergency department settings.\n2. Diagnostic Model Performance (CheXNet-Pro Engine)"
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.784,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 2,
+    "category": "In-Domain / Factual",
+    "question": "What is the maximum processing latency permitted for thoracic CT series under the clinical workflow SLA?",
+    "target_doc": "AI_Healthcare_Whitepaper.pdf",
+    "target_page": 2,
+    "expected_summary": "Strictly governed under an SLA of less than 1.8 seconds per volumetric CT series.",
+    "generated_answer": "Processing latency is\nstrictly governed under a Service Level Agreement (SLA) of less than 1.8 seconds per volumetric CT series. [AI_Healthcare_Whitepaper.pdf, Page 2, Chunk 1] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 2,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p2_c0",
+        "similarity_score": 0.615,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 2, Chunk 1]",
+        "preview": "3. Clinical Workflow & DICOM / PACS Integration\nIntegration into hospital IT ecosystems is accomplished via zero-footprint microservices adhering to DICOM 3.0 and\nHL7 FHIR standards. Upon completion of a thoracic computed tomography (CT) scan or plai...",
+        "full_text": "3. Clinical Workflow & DICOM / PACS Integration\nIntegration into hospital IT ecosystems is accomplished via zero-footprint microservices adhering to DICOM 3.0 and\nHL7 FHIR standards. Upon completion of a thoracic computed tomography (CT) scan or plain film radiograph,\nimages are routed through the secure hospital PACS gateway to the local inference node. Processing latency is\nstrictly governed under a Service Level Agreement (SLA) of less than 1.8 seconds per volumetric CT series.\n4. Hardware Specifications & Edge Inference\nTo guarantee high availability even during external network interruptions, inference is conducted on on-premise edge"
+      },
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 1,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p1_c2",
+        "similarity_score": 0.502,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 3]",
+        "preview": "Key Benchmark Summary: The model reduced average time-to-treatment for critical findings from 74 minutes to 11.5\nminutes, resulting in an 84.4% reduction in reporting latency.",
+        "full_text": "Key Benchmark Summary: The model reduced average time-to-treatment for critical findings from 74 minutes to 11.5\nminutes, resulting in an 84.4% reduction in reporting latency."
+      },
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 1,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p1_c0",
+        "similarity_score": 0.463,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 1]",
+        "preview": "Clinical Whitepaper: Artificial Intelligence in\nModern Diagnostic Radiology\nDocument ID: MED-AI-2024-V2 | Release Date: October 2024 | Author: Global Healthcare AI Consortium\n1. Executive Summary & Overview\nArtificial Intelligence (AI) and deep convo...",
+        "full_text": "Clinical Whitepaper: Artificial Intelligence in\nModern Diagnostic Radiology\nDocument ID: MED-AI-2024-V2 | Release Date: October 2024 | Author: Global Healthcare AI Consortium\n1. Executive Summary & Overview\nArtificial Intelligence (AI) and deep convolutional neural networks (CNNs) have emerged as pivotal tools in\naugmenting clinical radiology workflows. This whitepaper documents the clinical validation, regulatory architecture,\nand technical benchmarks of the PulseVision-AI platform, designed specifically for automated triage and\ncomputer-aided detection (CADe) of thoracic abnormalities in emergency department settings.\n2. Diagnostic Model Performance (CheXNet-Pro Engine)"
+      },
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 1,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p1_c1",
+        "similarity_score": 0.433,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 2]",
+        "preview": "2. Diagnostic Model Performance (CheXNet-Pro Engine)\nThe underlying diagnostic inference engine, designated as CheXNet-Pro v2.4, was evaluated on a curated\nmulti-center dataset of 142,500 chest radiographs. In prospective clinical trials across 12 ac...",
+        "full_text": "2. Diagnostic Model Performance (CheXNet-Pro Engine)\nThe underlying diagnostic inference engine, designated as CheXNet-Pro v2.4, was evaluated on a curated\nmulti-center dataset of 142,500 chest radiographs. In prospective clinical trials across 12 academic medical centers,\nthe model demonstrated an overall sensitivity of 94.7% and a specificity of 91.3% in identifying malignant pulmonary\nnodules (>6mm). For tension pneumothorax triage, CheXNet-Pro achieved an area under the receiver operating\ncharacteristic curve (AUROC) of 0.982.\nKey Benchmark Summary: The model reduced average time-to-treatment for critical findings from 74 minutes to 11.5"
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.615,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 3,
+    "category": "In-Domain / Factual",
+    "question": "Under which FDA regulatory pathway and clearance number was the PulseVision-AI system cleared?",
+    "target_doc": "AI_Healthcare_Whitepaper.pdf",
+    "target_page": 3,
+    "expected_summary": "FDA 510(k) pathway under clearance number K233912 as Class II SaMD.",
+    "generated_answer": "Regulatory Clearances & Quality Management\nPulseVision-AI has achieved regulatory clearance under the United States Food and Drug Administration (FDA)\n510(k) pathway (K233912) as a Class II Software as a Medical Device (SaMD). [AI_Healthcare_Whitepaper.pdf, Page 3, Chunk 1] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 3,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p3_c0",
+        "similarity_score": 0.665,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 3, Chunk 1]",
+        "preview": "5. Regulatory Clearances & Quality Management\nPulseVision-AI has achieved regulatory clearance under the United States Food and Drug Administration (FDA)\n510(k) pathway (K233912) as a Class II Software as a Medical Device (SaMD). The clearance adhere...",
+        "full_text": "5. Regulatory Clearances & Quality Management\nPulseVision-AI has achieved regulatory clearance under the United States Food and Drug Administration (FDA)\n510(k) pathway (K233912) as a Class II Software as a Medical Device (SaMD). The clearance adheres strictly to the\nFDA's June 2024 Good Machine Learning Practice (GMLP) guidelines. In the European Union, the system holds CE\nMark certification under the Medical Device Regulation (EU MDR 2017/745), categorized as Class IIb software.\n6. Algorithmic Drift Monitoring & Post-Market Surveillance\nTo mitigate dataset shift and population drift over time, the system implements continuous statistical monitoring using"
+      },
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 1,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p1_c0",
+        "similarity_score": 0.42,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 1, Chunk 1]",
+        "preview": "Clinical Whitepaper: Artificial Intelligence in\nModern Diagnostic Radiology\nDocument ID: MED-AI-2024-V2 | Release Date: October 2024 | Author: Global Healthcare AI Consortium\n1. Executive Summary & Overview\nArtificial Intelligence (AI) and deep convo...",
+        "full_text": "Clinical Whitepaper: Artificial Intelligence in\nModern Diagnostic Radiology\nDocument ID: MED-AI-2024-V2 | Release Date: October 2024 | Author: Global Healthcare AI Consortium\n1. Executive Summary & Overview\nArtificial Intelligence (AI) and deep convolutional neural networks (CNNs) have emerged as pivotal tools in\naugmenting clinical radiology workflows. This whitepaper documents the clinical validation, regulatory architecture,\nand technical benchmarks of the PulseVision-AI platform, designed specifically for automated triage and\ncomputer-aided detection (CADe) of thoracic abnormalities in emergency department settings.\n2. Diagnostic Model Performance (CheXNet-Pro Engine)"
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.665,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 4,
+    "category": "In-Domain / Factual",
+    "question": "What cryptographic algorithm and encryption standard are mandated for data at rest and data in transit?",
+    "target_doc": "AI_Healthcare_Whitepaper.pdf",
+    "target_page": 4,
+    "expected_summary": "256-bit AES-GCM for data at rest and TLS 1.3 for data in transit.",
+    "generated_answer": "All data at rest is encrypted using 256-bit AES-GCM cryptographic algorithms with hardware security module (HSM)\nmanaged keys. [AI_Healthcare_Whitepaper.pdf, Page 4, Chunk 2] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 4,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p4_c1",
+        "similarity_score": 0.6,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 4, Chunk 2]",
+        "preview": "All data at rest is encrypted using 256-bit AES-GCM cryptographic algorithms with hardware security module (HSM)\nmanaged keys. Data in transit across hospital networks requires mandatory TLS 1.3 transport encryption with mutual\ncertificate authentica...",
+        "full_text": "All data at rest is encrypted using 256-bit AES-GCM cryptographic algorithms with hardware security module (HSM)\nmanaged keys. Data in transit across hospital networks requires mandatory TLS 1.3 transport encryption with mutual\ncertificate authentication (mTLS). User role-based access control (RBAC) mandates hardware security key\n(FIDO2/WebAuthn) multi-factor authentication for all clinical and administrative accounts."
+      },
+      {
+        "source": "AI_Healthcare_Whitepaper.pdf",
+        "page": 4,
+        "chunk_id": "AI_Healthcare_Whitepaper_pdf_p4_c0",
+        "similarity_score": 0.524,
+        "citation_tag": "[AI_Healthcare_Whitepaper.pdf, Page 4, Chunk 1]",
+        "preview": "7. Data Privacy, Encryption & HIPAA Security Safeguards\nTo maintain rigorous compliance with HIPAA Title II administrative and security standards, all patient health\ninformation (PHI) undergoes automated de-identification prior to secondary telemetry...",
+        "full_text": "7. Data Privacy, Encryption & HIPAA Security Safeguards\nTo maintain rigorous compliance with HIPAA Title II administrative and security standards, all patient health\ninformation (PHI) undergoes automated de-identification prior to secondary telemetry transmission. The\nde-identification protocol complies with the HIPAA Safe Harbor Method, systematically stripping all 18 designated\npersonal identifiers, including patient names, geographic codes below state level, dates, and medical record numbers\n(MRNs).\n8. Cryptographic Protocols & Access Control\nAll data at rest is encrypted using 256-bit AES-GCM cryptographic algorithms with hardware security module (HSM)"
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.6,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 5,
+    "category": "In-Domain / Factual",
+    "question": "What are the company's core collaboration working hours and how many on-site days are required for hybrid staff?",
+    "target_doc": "Company_Policy_Handbook.pdf",
+    "target_page": 1,
+    "expected_summary": "Core hours from 10:00 AM to 4:00 PM EST; minimum 2 days per week on-site.",
+    "generated_answer": "Hybrid Work Policy & Office Attendance\nEmployees assigned to hybrid status are required to work a minimum of 2 days per week on-site at their designated [Company_Policy_Handbook.pdf, Page 1, Chunk 1] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 1,
+        "chunk_id": "Company_Policy_Handbook_pdf_p1_c0",
+        "similarity_score": 0.731,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 1, Chunk 1]",
+        "preview": "Apex Innovations Employee Operations & Policy\nHandbook\nVersion: 2024.3 | Effective Date: January 1, 2024 | Human Resources Department\n1. Workplace Arrangements & Working Hours\nApex Innovations operates under a flexible hybrid working framework. Stand...",
+        "full_text": "Apex Innovations Employee Operations & Policy\nHandbook\nVersion: 2024.3 | Effective Date: January 1, 2024 | Human Resources Department\n1. Workplace Arrangements & Working Hours\nApex Innovations operates under a flexible hybrid working framework. Standard office core collaboration hours are\nfrom 10:00 AM to 4:00 PM Eastern Standard Time (EST), Monday through Friday. All full-time employees are\nexpected to be reachable and active during these hours.\n2. Hybrid Work Policy & Office Attendance\nEmployees assigned to hybrid status are required to work a minimum of 2 days per week on-site at their designated"
+      },
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 1,
+        "chunk_id": "Company_Policy_Handbook_pdf_p1_c1",
+        "similarity_score": 0.688,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 1, Chunk 2]",
+        "preview": "Employees assigned to hybrid status are required to work a minimum of 2 days per week on-site at their designated\nregional office, with the remaining 3 days permitted as remote work from home. Remote work outside the country of\nemployment is permitte...",
+        "full_text": "Employees assigned to hybrid status are required to work a minimum of 2 days per week on-site at their designated\nregional office, with the remaining 3 days permitted as remote work from home. Remote work outside the country of\nemployment is permitted for up to a maximum of 30 consecutive calendar days per year, subject to prior written\nauthorization from HR and IT compliance."
+      },
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 2,
+        "chunk_id": "Company_Policy_Handbook_pdf_p2_c0",
+        "similarity_score": 0.388,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 2, Chunk 1]",
+        "preview": "3. Paid Time Off (PTO) & Leave Allocations\nFull-time permanent employees accrue 25 business days of paid annual vacation per calendar year, accrued on a\nsemi-monthly basis. In addition, employees receive 10 days of paid medical/sick leave annually, w...",
+        "full_text": "3. Paid Time Off (PTO) & Leave Allocations\nFull-time permanent employees accrue 25 business days of paid annual vacation per calendar year, accrued on a\nsemi-monthly basis. In addition, employees receive 10 days of paid medical/sick leave annually, which does not\nrequire medical practitioner verification for absences of 2 days or fewer.\n4. Parental Leave Entitlements\nNew parents, whether through birth, adoption, or surrogacy, are entitled to 16 weeks of fully paid parental leave for\nthe primary caregiver, and 8 weeks of fully paid leave for the secondary caregiver. This leave must be taken within\nthe first 12 months following the qualifying event.\n5. PTO Request Protocol"
+      },
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 2,
+        "chunk_id": "Company_Policy_Handbook_pdf_p2_c1",
+        "similarity_score": 0.378,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 2, Chunk 2]",
+        "preview": "the first 12 months following the qualifying event.\n5. PTO Request Protocol\nAny scheduled PTO request exceeding 3 consecutive working days must be submitted through the internal HR portal\nat least 14 calendar days in advance. A maximum of 5 unused va...",
+        "full_text": "the first 12 months following the qualifying event.\n5. PTO Request Protocol\nAny scheduled PTO request exceeding 3 consecutive working days must be submitted through the internal HR portal\nat least 14 calendar days in advance. A maximum of 5 unused vacation days may be rolled over into the\nsubsequent calendar year, expiring on March 31."
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.731,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 6,
+    "category": "In-Domain / Factual",
+    "question": "How many weeks of fully paid parental leave are provided for primary and secondary caregivers?",
+    "target_doc": "Company_Policy_Handbook.pdf",
+    "target_page": 2,
+    "expected_summary": "16 weeks fully paid leave for primary caregiver, 8 weeks for secondary caregiver.",
+    "generated_answer": "Parental Leave Entitlements\nNew parents, whether through birth, adoption, or surrogacy, are entitled to 16 weeks of fully paid parental leave for\nthe primary caregiver, and 8 weeks of fully paid leave for the secondary caregiver. [Company_Policy_Handbook.pdf, Page 2, Chunk 1] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 2,
+        "chunk_id": "Company_Policy_Handbook_pdf_p2_c0",
+        "similarity_score": 0.79,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 2, Chunk 1]",
+        "preview": "3. Paid Time Off (PTO) & Leave Allocations\nFull-time permanent employees accrue 25 business days of paid annual vacation per calendar year, accrued on a\nsemi-monthly basis. In addition, employees receive 10 days of paid medical/sick leave annually, w...",
+        "full_text": "3. Paid Time Off (PTO) & Leave Allocations\nFull-time permanent employees accrue 25 business days of paid annual vacation per calendar year, accrued on a\nsemi-monthly basis. In addition, employees receive 10 days of paid medical/sick leave annually, which does not\nrequire medical practitioner verification for absences of 2 days or fewer.\n4. Parental Leave Entitlements\nNew parents, whether through birth, adoption, or surrogacy, are entitled to 16 weeks of fully paid parental leave for\nthe primary caregiver, and 8 weeks of fully paid leave for the secondary caregiver. This leave must be taken within\nthe first 12 months following the qualifying event.\n5. PTO Request Protocol"
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.79,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 7,
+    "category": "In-Domain / Factual",
+    "question": "Within how many calendar days must business expenses be submitted, and what is the home office stipend amount?",
+    "target_doc": "Company_Policy_Handbook.pdf",
+    "target_page": 3,
+    "expected_summary": "Submitted within 30 calendar days of purchase; one-time $1,200.00 USD stipend.",
+    "generated_answer": "Expense Reimbursement Guidelines\nBusiness-related expenses incurred on behalf of the company must be submitted via the Concur expense portal\nwithin 30 calendar days of purchase. [Company_Policy_Handbook.pdf, Page 3, Chunk 1] *(Generated via Local Extractive Engine)*",
+    "citations": [
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 3,
+        "chunk_id": "Company_Policy_Handbook_pdf_p3_c0",
+        "similarity_score": 0.66,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 3, Chunk 1]",
+        "preview": "6. Expense Reimbursement Guidelines\nBusiness-related expenses incurred on behalf of the company must be submitted via the Concur expense portal\nwithin 30 calendar days of purchase. Itemized receipts are strictly mandatory for all expenditures exceedi...",
+        "full_text": "6. Expense Reimbursement Guidelines\nBusiness-related expenses incurred on behalf of the company must be submitted via the Concur expense portal\nwithin 30 calendar days of purchase. Itemized receipts are strictly mandatory for all expenditures exceeding $25.00\nUSD. Daily meal allowances during approved travel are capped at $75.00 USD per diem.\n7. Home Office & Equipment Stipend\nTo support ergonomic and productive remote working conditions, new full-time hires are provided a one-time home\noffice equipment stipend of $1,200.00 USD, usable for monitors, ergonomic chairs, desks, and peripheral devices. In"
+      },
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 2,
+        "chunk_id": "Company_Policy_Handbook_pdf_p2_c0",
+        "similarity_score": 0.399,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 2, Chunk 1]",
+        "preview": "3. Paid Time Off (PTO) & Leave Allocations\nFull-time permanent employees accrue 25 business days of paid annual vacation per calendar year, accrued on a\nsemi-monthly basis. In addition, employees receive 10 days of paid medical/sick leave annually, w...",
+        "full_text": "3. Paid Time Off (PTO) & Leave Allocations\nFull-time permanent employees accrue 25 business days of paid annual vacation per calendar year, accrued on a\nsemi-monthly basis. In addition, employees receive 10 days of paid medical/sick leave annually, which does not\nrequire medical practitioner verification for absences of 2 days or fewer.\n4. Parental Leave Entitlements\nNew parents, whether through birth, adoption, or surrogacy, are entitled to 16 weeks of fully paid parental leave for\nthe primary caregiver, and 8 weeks of fully paid leave for the secondary caregiver. This leave must be taken within\nthe first 12 months following the qualifying event.\n5. PTO Request Protocol"
+      },
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 2,
+        "chunk_id": "Company_Policy_Handbook_pdf_p2_c1",
+        "similarity_score": 0.387,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 2, Chunk 2]",
+        "preview": "the first 12 months following the qualifying event.\n5. PTO Request Protocol\nAny scheduled PTO request exceeding 3 consecutive working days must be submitted through the internal HR portal\nat least 14 calendar days in advance. A maximum of 5 unused va...",
+        "full_text": "the first 12 months following the qualifying event.\n5. PTO Request Protocol\nAny scheduled PTO request exceeding 3 consecutive working days must be submitted through the internal HR portal\nat least 14 calendar days in advance. A maximum of 5 unused vacation days may be rolled over into the\nsubsequent calendar year, expiring on March 31."
+      },
+      {
+        "source": "Company_Policy_Handbook.pdf",
+        "page": 3,
+        "chunk_id": "Company_Policy_Handbook_pdf_p3_c1",
+        "similarity_score": 0.384,
+        "citation_tag": "[Company_Policy_Handbook.pdf, Page 3, Chunk 2]",
+        "preview": "office equipment stipend of $1,200.00 USD, usable for monitors, ergonomic chairs, desks, and peripheral devices. In\naddition, an ongoing monthly remote connectivity subsidy of $60.00 USD is credited on monthly payroll.\n8. Information Security & Hardw...",
+        "full_text": "office equipment stipend of $1,200.00 USD, usable for monitors, ergonomic chairs, desks, and peripheral devices. In\naddition, an ongoing monthly remote connectivity subsidy of $60.00 USD is credited on monthly payroll.\n8. Information Security & Hardware Guidelines\nCompany-issued laptops are encrypted and monitored. Connecting personal USB flash drives or unapproved\nexternal mass storage devices to company hardware is strictly prohibited. Multi-Factor Authentication (MFA) via\nauthenticator app or hardware token is mandatory across all enterprise cloud services."
+      }
+    ],
+    "is_answerable": true,
+    "top_similarity": 0.66,
+    "status": "PASS",
+    "notes": "Verified fact with source citation."
+  },
+  {
+    "id": 8,
+    "category": "Out-of-Domain / Refusal Test",
+    "question": "What is the stock ticker symbol and quarterly revenue for Apex Innovations in 2023?",
+    "target_doc": null,
+    "target_page": null,
+    "expected_summary": "System must safely refuse without guessing or hallucinating revenue data.",
+    "generated_answer": "I cannot answer this question based on the provided document(s). The required information was not found in the uploaded text.",
+    "citations": [],
+    "is_answerable": false,
+    "top_similarity": 0.301,
+    "status": "PASS",
+    "notes": "Correctly refused out-of-domain query."
+  },
+  {
+    "id": 9,
+    "category": "Out-of-Domain / Refusal Test",
+    "question": "What is the standard clinical dosage of Amoxicillin for pediatric bacterial pharyngitis?",
+    "target_doc": null,
+    "target_page": null,
+    "expected_summary": "System must safely refuse medical dosage questions not in documents.",
+    "generated_answer": "I cannot answer this question based on the provided document(s). The required information was not found in the uploaded text.",
+    "citations": [],
+    "is_answerable": false,
+    "top_similarity": 0.226,
+    "status": "PASS",
+    "notes": "Correctly refused out-of-domain query."
+  },
+  {
+    "id": 10,
+    "category": "Out-of-Domain / Refusal Test",
+    "question": "What is the capital city of planet Mars and who was elected mayor?",
+    "target_doc": null,
+    "target_page": null,
+    "expected_summary": "System must reject non-existent entity questions without hallucination.",
+    "generated_answer": "I cannot answer this question based on the provided document(s). The required information was not found in the uploaded text.",
+    "citations": [],
+    "is_answerable": false,
+    "top_similarity": 0.022,
+    "status": "PASS",
+    "notes": "Correctly refused out-of-domain query."
+  }
+]
