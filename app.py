@@ -1,3 +1,16 @@
+# --- COMPATIBILITY PATCH FOR STREAMLIT + PYTORCH ON WINDOWS / PYTHON 3.13 ---
+try:
+    import torch
+    if hasattr(torch, "_classes") and hasattr(torch._classes, "_Classes"):
+        _orig_getattr = torch._classes._Classes.__getattr__
+        def _safe_getattr(self, attr):
+            if attr.startswith("_"):
+                raise AttributeError(attr)
+            return _orig_getattr(self, attr)
+        torch._classes._Classes.__getattr__ = _safe_getattr
+except Exception:
+    pass
+
 import os
 import time
 import json

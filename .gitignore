@@ -17,8 +17,8 @@ env/
 .faiss_index/
 chroma_db/
 
-# Streamlit config / cache
-.streamlit/
+# Streamlit secrets / cache
+.streamlit/secrets.toml
 *.log
 
 # IDEs
